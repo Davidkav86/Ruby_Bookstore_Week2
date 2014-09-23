@@ -34,4 +34,8 @@ class CsvReader
   def authorSearch(author)
      @books_in_stock.select {|book| book.author == author}
   end
+
+  def genreSearch(genre)
+     @books_in_stock.select {|book| book.genre == genre}
+   end
 end 
