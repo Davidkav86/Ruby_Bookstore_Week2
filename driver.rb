@@ -1,4 +1,4 @@
-require_relative 'csv_reader'
+require_relative 'csv_reader_hash'
 require_relative 'commands/author_search_command'
 require_relative 'commands/number_of_copies_command'
 require_relative 'commands/update_book_command'
@@ -6,7 +6,7 @@ require_relative 'commands/quit_command'
 require_relative 'commands/genre_search'
 
 
-data_source = CsvReader.new (ARGV[0])
+data_source = CsvReaderHash.new (ARGV[0])
 data_source.start
 
 commands = [
