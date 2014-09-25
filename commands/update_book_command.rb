@@ -32,6 +32,7 @@ class UpdateBookCommand < UserCommand
           print ' ? '
           response = STDIN.gets.chomp.to_i 
           book.genre = $GENRE[response - 1] if (1..$GENRE.length).member? response 
+          @data_source.updateBook book
         else
           puts 'Invalid ISBN'
         end

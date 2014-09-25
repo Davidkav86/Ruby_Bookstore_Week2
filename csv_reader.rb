@@ -38,4 +38,7 @@ class CsvReader
   def genreSearch(genre)
      @books_in_stock.select {|book| book.genre == genre}
    end
+
+   def updateBook book
+   end
 end 
